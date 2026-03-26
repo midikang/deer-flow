@@ -1,5 +1,7 @@
 # Codebase-to-Course Skill
 
+English | [中文](./README_zh.md)
+
 ## Overview
 
 The **codebase-to-course** skill transforms any codebase into a beautiful, interactive single-page HTML course that teaches how the code works to non-technical people (especially "vibe coders" who build with AI).
