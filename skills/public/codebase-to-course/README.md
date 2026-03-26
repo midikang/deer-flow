@@ -1,10 +1,12 @@
 # Codebase-to-Course Skill
 
-English | [中文](./README_zh.md)
+English | [中文](./README_zh.md) | [📺 Interactive Demo](./demo.html)
 
 ## Overview
 
 The **codebase-to-course** skill transforms any codebase into a beautiful, interactive single-page HTML course that teaches how the code works to non-technical people (especially "vibe coders" who build with AI).
+
+**[🎮 Try the Interactive Demo](./demo.html)** to see examples of code translations, quizzes, and interactive elements in action!
 
 ## What It Does
 
