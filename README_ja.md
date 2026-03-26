@@ -1,583 +1,545 @@
-# 🦌 DeerFlow
+# 🦌 DeerFlow - 2.0
 
-[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[English](./README.md) | [中文](./README_zh.md) | 日本語 | [Français](./README_fr.md)
 
-[English](./README.md) | [简体中文](./README_zh.md) | [日本語](./README_ja.md) | [Deutsch](./README_de.md) | [Español](./README_es.md) | [Русский](./README_ru.md) | [Portuguese](./README_pt.md)
+[![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB?logo=python&logoColor=white)](./backend/pyproject.toml)
+[![Node.js](https://img.shields.io/badge/Node.js-22%2B-339933?logo=node.js&logoColor=white)](./Makefile)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
-> オープンソースから生まれ、オープンソースに還元する。
+<a href="https://trendshift.io/repositories/14699" target="_blank"><img src="https://trendshift.io/api/badge/repositories/14699" alt="bytedance%2Fdeer-flow | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+> 2026年2月28日、バージョン2のリリースに伴い、DeerFlowはGitHub Trendingで🏆 第1位を獲得しました。素晴らしいコミュニティの皆さん、ありがとうございます！💪🔥
 
-**DeerFlow**（**D**eep **E**xploration and **E**fficient **R**esearch **Flow**）は、オープンソースコミュニティの素晴らしい成果の上に構築されたコミュニティ主導の深層研究フレームワークです。私たちの目標は、言語モデルとウェブ検索、クローリング、Python コード実行などの専門ツールを組み合わせながら、これを可能にしたコミュニティに貢献することです。
+DeerFlow（**D**eep **E**xploration and **E**fficient **R**esearch **Flow**）は、**サブエージェント**、**メモリ**、**サンドボックス**を統合し、**拡張可能なスキル**によってあらゆるタスクを実行できるオープンソースの**スーパーエージェントハーネス**です。
 
-現在、DeerFlow は火山引擎の FaaS アプリケーションセンターに正式に入居しています。ユーザーは体験リンクを通じてオンラインで体験し、その強力な機能と便利な操作を直感的に感じることができます。同時に、さまざまなユーザーの展開ニーズを満たすため、DeerFlow は火山引擎に基づくワンクリック展開をサポートしています。展開リンクをクリックして展開プロセスを迅速に完了し、効率的な研究の旅を始めましょう。
+https://github.com/user-attachments/assets/a8bcadc4-e040-4cf2-8fda-dd768b999c18
 
-詳細については[DeerFlow の公式ウェブサイト](https://deerflow.tech/)をご覧ください。
+> [!NOTE]
+> **DeerFlow 2.0はゼロからの完全な書き直しです。** v1とコードを共有していません。オリジナルのDeep Researchフレームワークをお探しの場合は、[`1.x`ブランチ](https://github.com/bytedance/deer-flow/tree/main-1.x)で引き続きメンテナンスされています。現在の開発は2.0に移行しています。
 
-## デモ
+## 公式ウェブサイト
 
-### ビデオ
+[<img width="2880" height="1600" alt="image" src="https://github.com/user-attachments/assets/a598c49f-3b2f-41ea-a052-05e21349188a" />](https://deerflow.tech)
 
-<https://github.com/user-attachments/assets/f3786598-1f2a-4d07-919e-8b99dfa1de3e>
+**実際のデモ**は[**公式ウェブサイト**](https://deerflow.tech)でご覧いただけます。
 
-このデモでは、DeerFlowの使用方法を紹介しています：
+## ByteDance Volcengine のコーディングプラン
 
-- MCPサービスとのシームレスな統合
-- 深層研究プロセスの実施と画像を含む包括的なレポートの作成
-- 生成されたレポートに基づくポッドキャストオーディオの作成
+<img width="4808" height="2400" alt="英文方舟" src="https://github.com/user-attachments/assets/2ecc7b9d-50be-4185-b1f7-5542d222fb2d" />
 
-### リプレイ例
+- DeerFlowの実行には、Doubao-Seed-2.0-Code、DeepSeek v3.2、Kimi 2.5の使用を強く推奨します
+- [詳細はこちら](https://www.byteplus.com/en/activity/codingplan?utm_campaign=deer_flow&utm_content=deer_flow&utm_medium=devrel&utm_source=OWO&utm_term=deer_flow)
+- [中国大陸の開発者はこちらをクリック](https://www.volcengine.com/activity/codingplan?utm_campaign=deer_flow&utm_content=deer_flow&utm_medium=devrel&utm_source=OWO&utm_term=deer_flow)
 
-- [エッフェル塔は世界一高いビルと比べてどれくらい高い？](https://deerflow.tech/chat?replay=eiffel-tower-vs-tallest-building)
-- [GitHub で最も人気のあるリポジトリは？](https://deerflow.tech/chat?replay=github-top-trending-repo)
-- [南京の伝統料理に関する記事を書く](https://deerflow.tech/chat?replay=nanjing-traditional-dishes)
-- [賃貸アパートの装飾方法は？](https://deerflow.tech/chat?replay=rental-apartment-decoration)
-- [公式ウェブサイトでより多くのリプレイ例をご覧ください。](https://deerflow.tech/#case-studies)
+## InfoQuest
+
+DeerFlowは、BytePlusが独自に開発したインテリジェント検索・クローリングツールセット「[InfoQuest（無料オンライン体験対応）](https://docs.byteplus.com/en/docs/InfoQuest/What_is_Info_Quest)」を新たに統合しました。
+
+<a href="https://docs.byteplus.com/en/docs/InfoQuest/What_is_Info_Quest" target="_blank">
+  <img
+    src="https://sf16-sg.tiktokcdn.com/obj/eden-sg/hubseh7bsbps/20251208-160108.png"   alt="InfoQuest_banner"
+  />
+</a>
 
 ---
 
-## 📑 目次
+## 目次
 
-- [🚀 クイックスタート](#クイックスタート)
-- [🌟 特徴](#特徴)
-- [🏗️ アーキテクチャ](#アーキテクチャ)
-- [🛠️ 開発](#開発)
-- [🗣️ テキスト読み上げ統合](#テキスト読み上げ統合)
-- [📚 例](#例)
-- [❓ よくある質問](#よくある質問)
-- [📜 ライセンス](#ライセンス)
-- [💖 謝辞](#謝辞)
-- [⭐ スター履歴](#スター履歴)
+- [🦌 DeerFlow - 2.0](#-deerflow---20)
+  - [公式ウェブサイト](#公式ウェブサイト)
+  - [InfoQuest](#infoquest)
+  - [目次](#目次)
+  - [Coding Agent に一文でセットアップを依頼](#coding-agent-に一文でセットアップを依頼)
+  - [クイックスタート](#クイックスタート)
+    - [設定](#設定)
+    - [アプリケーションの実行](#アプリケーションの実行)
+      - [オプション1: Docker（推奨）](#オプション1-docker推奨)
+      - [オプション2: ローカル開発](#オプション2-ローカル開発)
+    - [詳細設定](#詳細設定)
+      - [サンドボックスモード](#サンドボックスモード)
+      - [MCPサーバー](#mcpサーバー)
+      - [IMチャネル](#imチャネル)
+  - [Deep Researchからスーパーエージェントハーネスへ](#deep-researchからスーパーエージェントハーネスへ)
+  - [コア機能](#コア機能)
+    - [スキルとツール](#スキルとツール)
+      - [Claude Code連携](#claude-code連携)
+    - [サブエージェント](#サブエージェント)
+    - [サンドボックスとファイルシステム](#サンドボックスとファイルシステム)
+    - [コンテキストエンジニアリング](#コンテキストエンジニアリング)
+    - [長期メモリ](#長期メモリ)
+  - [推奨モデル](#推奨モデル)
+  - [組み込みPythonクライアント](#組み込みpythonクライアント)
+  - [ドキュメント](#ドキュメント)
+  - [⚠️ セキュリティに関する注意](#️-セキュリティに関する注意)
+  - [コントリビュート](#コントリビュート)
+  - [ライセンス](#ライセンス)
+  - [謝辞](#謝辞)
+    - [主要コントリビューター](#主要コントリビューター)
+  - [Star History](#star-history)
+
+## Coding Agent に一文でセットアップを依頼
+
+Claude Code、Codex、Cursor、Windsurf などの coding agent を使っているなら、次の一文をそのまま渡せます。
+
+```text
+DeerFlow がまだ clone されていなければ先に clone してから、https://raw.githubusercontent.com/bytedance/deer-flow/main/Install.md に従ってローカル開発環境を初期化してください
+```
+
+このプロンプトは coding agent 向けです。必要なら先にリポジトリを clone し、Docker が使える場合は Docker を優先して初期セットアップを行い、最後に次の起動コマンドと不足している設定項目だけを返します。
 
 ## クイックスタート
 
-DeerFlow は Python で開発され、Node.js で書かれた Web UI が付属しています。スムーズなセットアッププロセスを確保するために、以下のツールの使用をお勧めします：
-
-### 推奨ツール
-
-- **[`uv`](https://docs.astral.sh/uv/getting-started/installation/):**
-  Python 環境と依存関係の管理を簡素化します。`uv`はルートディレクトリに自動的に仮想環境を作成し、必要なパッケージをすべてインストールします—Python 環境を手動でインストールする必要はありません。
-
-- **[`nvm`](https://github.com/nvm-sh/nvm):**
-  複数の Node.js ランタイムバージョンを簡単に管理します。
-
-- **[`pnpm`](https://pnpm.io/installation):**
-  Node.js プロジェクトの依存関係をインストールおよび管理します。
-
-### 環境要件
-
-システムが以下の最小要件を満たしていることを確認してください：
-
-- **[Python](https://www.python.org/downloads/):** バージョン `3.12+`
-- **[Node.js](https://nodejs.org/en/download/):** バージョン `22+`
-
-### インストール
-
-```bash
-# リポジトリをクローン
-git clone https://github.com/bytedance/deer-flow.git
-cd deer-flow
-
-# 依存関係をインストール、uvがPythonインタープリタと仮想環境の作成、必要なパッケージのインストールを担当
-uv sync
-
-# APIキーで.envを設定
-# Tavily: https://app.tavily.com/home
-# Brave_SEARCH: https://brave.com/search/api/
-# 火山引擎TTS: TTSの資格情報がある場合は追加
-cp .env.example .env
-
-# 下記の「サポートされている検索エンジン」と「テキスト読み上げ統合」セクションですべての利用可能なオプションを確認
-
-# LLMモデルとAPIキーのconf.yamlを設定
-# 詳細は「docs/configuration_guide.md」を参照
-cp conf.yaml.example conf.yaml
-
-# PPT生成用にmarpをインストール
-# https://github.com/marp-team/marp-cli?tab=readme-ov-file#use-package-manager
-brew install marp-cli
-```
-
-オプションで、[pnpm](https://pnpm.io/installation)を使用して Web UI 依存関係をインストール：
-
-```bash
-cd deer-flow/web
-pnpm install
-```
-
 ### 設定
 
-詳細については[設定ガイド](docs/configuration_guide.md)を参照してください。
+1. **DeerFlowリポジトリをクローン**
 
-> [!注意]
-> プロジェクトを開始する前に、ガイドを注意深く読み、特定の設定と要件に合わせて構成を更新してください。
+   ```bash
+   git clone https://github.com/bytedance/deer-flow.git
+   cd deer-flow
+   ```
 
-### コンソール UI
+2. **ローカル設定ファイルの生成**
 
-プロジェクトを実行する最も迅速な方法は、コンソール UI を使用することです。
+   プロジェクトルートディレクトリ（`deer-flow/`）から以下を実行します：
+
+   ```bash
+   make config
+   ```
+
+   このコマンドは、提供されたテンプレートに基づいてローカル設定ファイルを作成します。
+
+3. **使用するモデルの設定**
+
+   `config.yaml`を編集し、少なくとも1つのモデルを定義します：
+
+   ```yaml
+   models:
+     - name: gpt-4                       # 内部識別子
+       display_name: GPT-4               # 表示名
+       use: langchain_openai:ChatOpenAI  # LangChainクラスパス
+       model: gpt-4                      # API用モデル識別子
+       api_key: $OPENAI_API_KEY          # APIキー（推奨：環境変数を使用）
+       max_tokens: 4096                  # リクエストあたりの最大トークン数
+       temperature: 0.7                  # サンプリング温度
+
+     - name: openrouter-gemini-2.5-flash
+       display_name: Gemini 2.5 Flash (OpenRouter)
+       use: langchain_openai:ChatOpenAI
+       model: google/gemini-2.5-flash-preview
+       api_key: $OPENAI_API_KEY          # OpenRouterもここではOpenAI互換のフィールド名を使用
+       base_url: https://openrouter.ai/api/v1
+   ```
+
+   OpenRouterやOpenAI互換のゲートウェイは、`langchain_openai:ChatOpenAI`と`base_url`で設定します。プロバイダー固有の環境変数名を使用したい場合は、`api_key`でその変数を明示的に指定してください（例：`api_key: $OPENROUTER_API_KEY`）。
+
+4. **設定したモデルのAPIキーを設定**
+
+   以下のいずれかの方法を選択してください：
+
+- オプションA：プロジェクトルートの`.env`ファイルを編集（推奨）
+
+   ```bash
+   TAVILY_API_KEY=your-tavily-api-key
+   OPENAI_API_KEY=your-openai-api-key
+   # OpenRouterもlangchain_openai:ChatOpenAI + base_url使用時はOPENAI_API_KEYを使用します。
+   # 必要に応じて他のプロバイダーキーを追加
+   INFOQUEST_API_KEY=your-infoquest-api-key
+   ```
+
+- オプションB：シェルで環境変数をエクスポート
+
+   ```bash
+   export OPENAI_API_KEY=your-openai-api-key
+   ```
+
+- オプションC：`config.yaml`を直接編集（本番環境には非推奨）
+
+   ```yaml
+   models:
+     - name: gpt-4
+       api_key: your-actual-api-key-here  # プレースホルダーを置換
+   ```
+
+### アプリケーションの実行
+
+#### オプション1: Docker（推奨）
+
+**開発環境**（ホットリロード、ソースマウント）：
 
 ```bash
-# bashライクなシェルでプロジェクトを実行
-uv run main.py
+make docker-init    # サンドボックスイメージをプル（初回またはイメージ更新時のみ）
+make docker-start   # サービスを開始（config.yamlからサンドボックスモードを自動検出）
 ```
 
-### Web UI
+`make docker-start`は、`config.yaml`がプロビジョナーモード（`sandbox.use: deerflow.community.aio_sandbox:AioSandboxProvider`と`provisioner_url`）を使用している場合にのみ`provisioner`を起動します。
 
-このプロジェクトには Web UI も含まれており、より動的で魅力的なインタラクティブ体験を提供します。
-
-> [!注意]
-> 先に Web UI の依存関係をインストールする必要があります。
+**本番環境**（ローカルでイメージをビルドし、ランタイム設定とデータをマウント）：
 
 ```bash
-# 開発モードでバックエンドとフロントエンドサーバーの両方を実行
-# macOS/Linuxの場合
-./bootstrap.sh -d
-
-# Windowsの場合
-bootstrap.bat -d
+make up     # イメージをビルドして全本番サービスを開始
+make down   # コンテナを停止して削除
 ```
+
 > [!NOTE]
-> デフォルトでは、セキュリティ上の理由からバックエンドサーバーは 127.0.0.1 (localhost) にバインドされます。外部接続を許可する必要がある場合 (例: Linux サーバーにデプロイする場合) は、ブートストラップスクリプトでサーバーホストを 0.0.0.0 に変更できます (uv run server.py --host 0.0.0.0)。
-> サービスを外部ネットワークに公開する前に、環境が適切に保護されていることを確認してください。
+> LangGraphエージェントサーバーは現在`langgraph dev`（オープンソースCLIサーバー）経由で実行されます。
 
-ブラウザを開き、[`http://localhost:3000`](http://localhost:3000)にアクセスして Web UI を探索してください。
+アクセス: http://localhost:2026
 
-[`web`](./web/)ディレクトリで詳細を確認できます。
+詳細なDocker開発ガイドは[CONTRIBUTING.md](CONTRIBUTING.md)をご覧ください。
 
-## サポートされている検索エンジン
+#### オプション2: ローカル開発
 
-DeerFlow は複数の検索エンジンをサポートしており、`.env`ファイルの`SEARCH_API`変数で設定できます：
+サービスをローカルで実行する場合：
 
-- **Tavily**（デフォルト）：AI アプリケーション向けの専門検索 API
-  - `.env`ファイルに`TAVILY_API_KEY`が必要
-  - 登録先：<https://app.tavily.com/home>
+前提条件：上記の「設定」手順を先に完了してください（`make config`とモデルAPIキー）。`make dev`には有効な設定ファイルが必要です（デフォルトはプロジェクトルートの`config.yaml`。`DEER_FLOW_CONFIG_PATH`で上書き可能）。
 
-- **DuckDuckGo**：プライバシー重視の検索エンジン
-  - APIキー不要
-
-- **Brave Search**：高度な機能を備えたプライバシー重視の検索エンジン
-  - `.env`ファイルに`BRAVE_SEARCH_API_KEY`が必要
-  - 登録先：<https://brave.com/search/api/>
-
-- **Arxiv**：学術研究用の科学論文検索
-  - APIキー不要
-  - 科学・学術論文専用
-
-お好みの検索エンジンを設定するには、`.env`ファイルで`SEARCH_API`変数を設定します：
-
-```bash
-# 選択肢: tavily, duckduckgo, brave_search, arxiv
-SEARCH_API=tavily
-```
-
-## 特徴
-
-### コア機能
-
-- 🤖 **LLM統合**
-  - [litellm](https://docs.litellm.ai/docs/providers)を通じてほとんどのモデルの統合をサポート
-  - Qwenなどのオープンソースモデルをサポート
-  - OpenAI互換のAPIインターフェース
-  - 異なるタスクの複雑さに対応するマルチティアLLMシステム
-
-### ツールと MCP 統合
-
-- 🔍 **検索と取得**
-  - Tavily、Brave Searchなどを通じたWeb検索
-  - Jinaを使用したクローリング
-  - 高度なコンテンツ抽出
-
-- 🔗 **MCPシームレス統合**
-  - プライベートドメインアクセス、ナレッジグラフ、Webブラウジングなどの機能を拡張
-  - 多様な研究ツールと方法論の統合を促進
-
-### 人間との協力
-
-- 🧠 **人間参加型ループ**
-  - 自然言語を使用した研究計画の対話的修正をサポート
-  - 研究計画の自動承認をサポート
-
-- 📝 **レポート後編集**
-  - Notionライクなブロック編集をサポート
-  - AI支援による洗練、文の短縮、拡張などのAI改良を可能に
-  - [tiptap](https://tiptap.dev/)を活用
-
-### コンテンツ作成
-
-- 🎙️ **ポッドキャストとプレゼンテーション生成**
-  - AI駆動のポッドキャストスクリプト生成と音声合成
-  - シンプルなPowerPointプレゼンテーションの自動作成
-  - カスタマイズ可能なテンプレートで個別のコンテンツに対応
-
-## アーキテクチャ
-
-DeerFlow は、自動研究とコード分析のためのモジュラーなマルチエージェントシステムアーキテクチャを実装しています。システムは LangGraph 上に構築され、コンポーネントが明確に定義されたメッセージパッシングシステムを通じて通信する柔軟な状態ベースのワークフローを実現しています。
-
-![アーキテクチャ図](./assets/architecture.png)
-
-> [deerflow.tech](https://deerflow.tech/#multi-agent-architecture)でライブで確認できます
-
-システムは以下のコンポーネントを含む合理化されたワークフローを採用しています：
-
-1. **コーディネーター**：ワークフローのライフサイクルを管理するエントリーポイント
-
-   - ユーザー入力に基づいて研究プロセスを開始
-   - 適切なタイミングでプランナーにタスクを委託
-   - ユーザーとシステム間の主要なインターフェースとして機能
-
-2. **プランナー**：タスク分解と計画のための戦略的コンポーネント
-
-   - 研究目標を分析し、構造化された実行計画を作成
-   - 十分なコンテキストが利用可能か、さらなる研究が必要かを判断
-   - 研究フローを管理し、最終レポート生成のタイミングを決定
-
-3. **研究チーム**：計画を実行する専門エージェントの集合：
-
-   - **研究者**：Web 検索エンジン、クローリング、さらには MCP サービスなどのツールを使用して Web 検索と情報収集を行う。
-   - **コーダー**：Python REPL ツールを使用してコード分析、実行、技術的タスクを処理する。
-     各エージェントは自分の役割に最適化された特定のツールにアクセスでき、LangGraph フレームワーク内で動作する
-
-4. **レポーター**：研究出力の最終段階プロセッサ
-   - 研究チームの調査結果を集約
-   - 収集した情報を処理および構造化
-   - 包括的な研究レポートを生成
-
-## テキスト読み上げ統合
-
-DeerFlowには現在、研究レポートを音声に変換できるテキスト読み上げ（TTS）機能が含まれています。この機能は火山引擎TTS APIを使用して高品質なテキストオーディオを生成します。速度、音量、ピッチなどの特性もカスタマイズ可能です。
-
-### TTS APIの使用
-
-`/api/tts`エンドポイントからTTS機能にアクセスできます：
-
-```bash
-# curlを使用したAPI呼び出し例
-curl --location 'http://localhost:8000/api/tts' \
---header 'Content-Type: application/json' \
---data '{
-    "text": "これはテキスト読み上げ機能のテストです。",
-    "speed_ratio": 1.0,
-    "volume_ratio": 1.0,
-    "pitch_ratio": 1.0
-}' \
---output speech.mp3
-```
-
-## 開発
-
-### テスト
-
-テストスイートの実行：
-
-```bash
-# すべてのテストを実行
-make test
-
-# 特定のテストファイルを実行
-pytest tests/integration/test_workflow.py
-
-# カバレッジテストを実行
-make coverage
-```
-
-### コード品質
-
-```bash
-# コードチェックを実行
-make lint
-
-# コードをフォーマット
-make format
-```
-
-### LangGraph Studio によるデバッグ
-
-DeerFlow はワークフローアーキテクチャとして LangGraph を使用しています。LangGraph Studio を使用してワークフローをリアルタイムでデバッグおよび可視化できます。
-
-#### ローカルで LangGraph Studio を実行
-
-DeerFlow には`langgraph.json`設定ファイルが含まれており、これが LangGraph Studio のグラフ構造と依存関係を定義しています。このファイルはプロジェクトで定義されたワークフローグラフを指し、`.env`ファイルから環境変数を自動的に読み込みます。
-
-##### Mac
-
-```bash
-# uvパッケージマネージャがない場合はインストール
-curl -LsSf https://astral.sh/uv/install.sh | sh
-
-# 依存関係をインストールしLangGraphサーバーを開始
-uvx --refresh --from "langgraph-cli[inmem]" --with-editable . --python 3.12 langgraph dev --allow-blocking
-```
-
-##### Windows / Linux
-
-```bash
-# 依存関係をインストール
-pip install -e .
-pip install -U "langgraph-cli[inmem]"
-
-# LangGraphサーバーを開始
-langgraph dev
-```
-
-LangGraphサーバーを開始すると、端末にいくつかのURLが表示されます：
-
-- API: <http://127.0.0.1:2024>
-- Studio UI: <https://smith.langchain.com/studio/?baseUrl=http://127.0.0.1:2024>
-- APIドキュメント: <http://127.0.0.1:2024/docs>
-
-- API: <http://127.0.0.1:2024>
-- Studio UI: <https://smith.langchain.com/studio/?baseUrl=http://127.0.0.1:2024>
-- APIドキュメント: <http://127.0.0.1:2024/docs>
-
-ブラウザで Studio UI リンクを開いてデバッグインターフェースにアクセスします。
-
-#### LangGraph Studio の使用
-
-Studio UI では、次のことができます：
-
-1. ワークフローグラフを可視化し、コンポーネントの接続方法を確認
-2. 実行をリアルタイムで追跡し、データがシステム内をどのように流れるかを理解
-3. ワークフローの各ステップの状態を検査
-4. 各コンポーネントの入力と出力を検査して問題をデバッグ
-5. 計画段階でフィードバックを提供して研究計画を洗練
-
-Studio UIで研究トピックを送信すると、次を含む全ワークフロー実行プロセスを見ることができます：
-
-- 研究計画を作成する計画段階
-- 計画を修正できるフィードバックループ
-- 各セクションの研究と執筆段階
-- 最終レポート生成
-
-### LangSmith トレースの有効化
-
-DeerFlow は LangSmith トレース機能をサポートしており、ワークフローのデバッグとモニタリングに役立ちます。LangSmith トレースを有効にするには：
-
-1. `.env` ファイルに次の設定があることを確認してください（`.env.example` を参照）：
-
+1. **前提条件の確認**：
    ```bash
-   LANGSMITH_TRACING=true
-   LANGSMITH_ENDPOINT="https://api.smith.langchain.com"
-   LANGSMITH_API_KEY="xxx"
-   LANGSMITH_PROJECT="xxx"
+   make check  # Node.js 22+、pnpm、uv、nginxを検証
    ```
 
-2. 次のコマンドを実行して LangSmith トレースを開始します：
-
+2. **依存関係のインストール**：
    ```bash
-   langgraph dev
+   make install  # バックエンド＋フロントエンドの依存関係をインストール
    ```
 
-これにより、LangGraph Studio でトレース可視化が有効になり、トレースがモニタリングと分析のために LangSmith に送信されます。
-
-## Docker
-
-このプロジェクトは Docker でも実行できます。
-
-まず、以下の[設定](#設定)セクションを読んでください。`.env`と`.conf.yaml`ファイルが準備できていることを確認してください。
-
-次に、独自の Web サーバーの Docker イメージをビルドします：
-
-```bash
-docker build -t deer-flow-api .
-```
-
-最後に、Web サーバーを実行する Docker コンテナを起動します：
-
-```bash
-# deer-flow-api-appを希望のコンテナ名に置き換えてください
-# サーバーを起動してlocalhost:8000にバインド
-docker run -d -t -p 127.0.0.1:8000:8000 --env-file .env --name deer-flow-api-app deer-flow-api
-
-# サーバーを停止
-docker stop deer-flow-api-app
-```
-
-### Docker Compose
-
-このプロジェクトは docker compose でも設定できます：
-
-```bash
-# dockerイメージをビルド
-docker compose build
-
-# サーバーを起動
-docker compose up
-```
-
-> [!WARNING]
-> DeerFlow を本番環境にデプロイする場合は、ウェブサイトに認証を追加し、MCPServer と Python Repl のセキュリティチェックを評価してください。
-
-## テキスト読み上げ統合
-
-DeerFlow には現在、研究レポートを音声に変換できるテキスト読み上げ（TTS）機能が含まれています。この機能は火山引擎 TTS API を使用して高品質なテキストオーディオを生成します。速度、音量、ピッチなどの特性もカスタマイズ可能です。
-
-### TTS API の使用
-
-`/api/tts`エンドポイントから TTS 機能にアクセスできます：
-
-```bash
-# curlを使用したAPI呼び出し例
-curl --location 'http://localhost:8000/api/tts' \
---header 'Content-Type: application/json' \
---data '{
-    "text": "これはテキスト読み上げ機能のテストです。",
-    "speed_ratio": 1.0,
-    "volume_ratio": 1.0,
-    "pitch_ratio": 1.0
-}' \
---output speech.mp3
-```
-
-## 例
-
-以下の例は DeerFlow の機能を示しています：
-
-### 研究レポート
-
-1. **OpenAI Sora レポート** - OpenAI の Sora AI ツールの分析
-
-   - 機能、アクセス方法、プロンプトエンジニアリング、制限、倫理的考慮について議論
-   - [完全なレポートを見る](examples/openai_sora_report.md)
-
-2. **Google の Agent to Agent プロトコルレポート** - Google の Agent to Agent（A2A）プロトコルの概要
-
-   - AI エージェント通信における役割と、Anthropic の Model Context Protocol（MCP）との関係について議論
-   - [完全なレポートを見る](examples/what_is_agent_to_agent_protocol.md)
-
-3. **MCP とは何か？** - 複数のコンテキストにおける「MCP」という用語の包括的分析
-
-   - AI における Model Context Protocol、化学における Monocalcium Phosphate、電子工学における Micro-channel Plate を探る
-   - [完全なレポートを見る](examples/what_is_mcp.md)
-
-4. **ビットコイン価格変動** - 最近のビットコイン価格動向の分析
-
-   - 市場動向、規制の影響、テクニカル指標の調査
-   - 歴史的データに基づく提言
-   - [完全なレポートを見る](examples/bitcoin_price_fluctuation.md)
-
-5. **LLM とは何か？** - 大規模言語モデルの詳細な探求
-
-   - アーキテクチャ、トレーニング、応用、倫理的考慮について議論
-   - [完全なレポートを見る](examples/what_is_llm.md)
-
-6. **Claude を使った深層研究の方法は？** - 深層研究での Claude の使用に関するベストプラクティスとワークフロー
-
-   - プロンプトエンジニアリング、データ分析、他のツールとの統合
-   - [完全なレポートを見る](examples/how_to_use_claude_deep_research.md)
-
-7. **医療における AI 採用：影響要因** - 医療における AI 採用に影響する要因の分析
-
-   - AI テクノロジー、データ品質、倫理的考慮、経済的評価、組織の準備状況、デジタルインフラについて議論
-   - [完全なレポートを見る](examples/AI_adoption_in_healthcare.md)
-
-8. **量子コンピューティングの暗号学への影響** - 量子コンピューティングの暗号学への影響の分析
-
-   - 古典的暗号の脆弱性、ポスト量子暗号学、耐量子暗号ソリューションについて議論
-   - [完全なレポートを見る](examples/Quantum_Computing_Impact_on_Cryptography.md)
-
-9. **クリスティアーノ・ロナウドのパフォーマンスハイライト** - クリスティアーノ・ロナウドのパフォーマンスハイライトの分析
-   - 彼のキャリア達成、国際ゴール、さまざまな大会でのパフォーマンスについて議論
-   - [完全なレポートを見る](examples/Cristiano_Ronaldo's_Performance_Highlights.md)
-
-これらの例を実行したり、独自の研究レポートを作成したりするには、次のコマンドを使用できます：
-
-```bash
-# 特定のクエリで実行
-uv run main.py "医療におけるAI採用に影響する要因は何か？"
-
-# カスタム計画パラメータで実行
-uv run main.py --max_plan_iterations 3 "量子コンピューティングは暗号学にどのように影響するか？"
-
-# 組み込み質問を使用したインタラクティブモードで実行
-uv run main.py --interactive
-
-# または基本的なインタラクティブプロンプトで実行
-uv run main.py
-
-# 利用可能なすべてのオプションを表示
-uv run main.py --help
-```
-
-### インタラクティブモード
-
-アプリケーションは現在、英語と中国語の組み込み質問を使用したインタラクティブモードをサポートしています：
-
-1. インタラクティブモードを開始：
-
+3. **（オプション）サンドボックスイメージの事前プル**：
    ```bash
-   uv run main.py --interactive
+   # Docker/コンテナベースのサンドボックス使用時に推奨
+   make setup-sandbox
    ```
 
-2. 好みの言語（English または Chinese）を選択
-
-3. 組み込み質問リストから選択するか、独自の質問を提示するオプションを選択
-
-4. システムが質問を処理し、包括的な研究レポートを生成
-
-### 人間参加型ループ
-
-DeerFlow には人間参加型ループメカニズムが含まれており、研究計画を実行する前にレビュー、編集、承認することができます：
-
-1. **計画レビュー**：人間参加型ループが有効な場合、システムは実行前に生成された研究計画を表示
-
-2. **フィードバック提供**：次のことができます：
-
-   - `[ACCEPTED]`と返信して計画を承認
-   - フィードバックを提供して計画を編集（例：`[EDIT PLAN] 技術実装に関するステップをさらに追加する`）
-   - システムはフィードバックを統合し、修正された計画を生成
-
-3. **自動承認**：レビュープロセスをスキップするために自動承認を有効にできます：
-
-4. **API統合**：APIを使用する場合、`feedback`パラメータでフィードバックを提供できます：
-
-   ```json
-   {
-     "messages": [
-       { "role": "user", "content": "量子コンピューティングとは何ですか？" }
-     ],
-     "thread_id": "my_thread_id",
-     "auto_accepted_plan": false,
-     "feedback": "[EDIT PLAN] 量子アルゴリズムについてもっと含める"
-   }
+4. **サービスの開始**：
+   ```bash
+   make dev
    ```
 
-### コマンドライン引数
+5. **アクセス**: http://localhost:2026
 
-アプリケーションは動作をカスタマイズするための複数のコマンドライン引数をサポートしています：
+### 詳細設定
+#### サンドボックスモード
 
-- **query**：処理する研究クエリ（複数の単語でも可）
-- **--interactive**：組み込み質問を使用したインタラクティブモードで実行
-- **--max_plan_iterations**：最大計画サイクル数（デフォルト：1）
-- **--max_step_num**：研究計画の最大ステップ数（デフォルト：3）
-- **--debug**：詳細なデバッグログを有効化
+DeerFlowは複数のサンドボックス実行モードをサポートしています：
+- **ローカル実行**（ホストマシン上で直接サンドボックスコードを実行）
+- **Docker実行**（分離されたDockerコンテナ内でサンドボックスコードを実行）
+- **KubernetesによるDocker実行**（プロビジョナーサービス経由でKubernetesポッドでサンドボックスコードを実行）
 
-## よくある質問
+Docker開発では、サービスの起動は`config.yaml`のサンドボックスモードに従います。ローカル/Dockerモードでは`provisioner`は起動されません。
 
-詳細については[FAQ.md](docs/FAQ.md)を参照してください。
+お好みのモードの設定については[サンドボックス設定ガイド](backend/docs/CONFIGURATION.md#sandbox)をご覧ください。
+
+#### MCPサーバー
+
+DeerFlowは、機能を拡張するための設定可能なMCPサーバーとスキルをサポートしています。
+HTTP/SSE MCPサーバーでは、OAuthトークンフロー（`client_credentials`、`refresh_token`）がサポートされています。
+詳細な手順は[MCPサーバーガイド](backend/docs/MCP_SERVER.md)をご覧ください。
+
+#### IMチャネル
+
+DeerFlowはメッセージングアプリからのタスク受信をサポートしています。チャネルは設定時に自動的に開始されます。いずれもパブリックIPは不要です。
+
+| チャネル | トランスポート | 難易度 |
+|---------|-----------|------------|
+| Telegram | Bot API（ロングポーリング） | 簡単 |
+| Slack | Socket Mode | 中程度 |
+| Feishu / Lark | WebSocket | 中程度 |
+
+**`config.yaml`での設定：**
+
+```yaml
+channels:
+  # LangGraphサーバーURL（デフォルト: http://localhost:2024）
+  langgraph_url: http://localhost:2024
+  # Gateway API URL（デフォルト: http://localhost:8001）
+  gateway_url: http://localhost:8001
+
+  # オプション: 全モバイルチャネルのグローバルセッションデフォルト
+  session:
+    assistant_id: lead_agent
+    config:
+      recursion_limit: 100
+    context:
+      thinking_enabled: true
+      is_plan_mode: false
+      subagent_enabled: false
+
+  feishu:
+    enabled: true
+    app_id: $FEISHU_APP_ID
+    app_secret: $FEISHU_APP_SECRET
+
+  slack:
+    enabled: true
+    bot_token: $SLACK_BOT_TOKEN     # xoxb-...
+    app_token: $SLACK_APP_TOKEN     # xapp-...（Socket Mode）
+    allowed_users: []               # 空 = 全員許可
+
+  telegram:
+    enabled: true
+    bot_token: $TELEGRAM_BOT_TOKEN
+    allowed_users: []               # 空 = 全員許可
+
+    # オプション: チャネル/ユーザーごとのセッション設定
+    session:
+      assistant_id: mobile_agent
+      context:
+        thinking_enabled: false
+      users:
+        "123456789":
+          assistant_id: vip_agent
+          config:
+            recursion_limit: 150
+          context:
+            thinking_enabled: true
+            subagent_enabled: true
+```
+
+対応するAPIキーを`.env`ファイルに設定します：
+
+```bash
+# Telegram
+TELEGRAM_BOT_TOKEN=123456789:ABCdefGHIjklMNOpqrSTUvwxYZ
+
+# Slack
+SLACK_BOT_TOKEN=xoxb-...
+SLACK_APP_TOKEN=xapp-...
+
+# Feishu / Lark
+FEISHU_APP_ID=cli_xxxx
+FEISHU_APP_SECRET=your_app_secret
+```
+
+**Telegramのセットアップ**
+
+1. [@BotFather](https://t.me/BotFather)とチャットし、`/newbot`を送信してHTTP APIトークンをコピーします。
+2. `.env`に`TELEGRAM_BOT_TOKEN`を設定し、`config.yaml`でチャネルを有効にします。
+
+**Slackのセットアップ**
+
+1. [api.slack.com/apps](https://api.slack.com/apps)でSlackアプリを作成 → 新規アプリ作成 → 最初から作成。
+2. **OAuth & Permissions**で、Botトークンスコープを追加：`app_mentions:read`、`chat:write`、`im:history`、`im:read`、`im:write`、`files:write`。
+3. **Socket Mode**を有効化 → `connections:write`スコープのApp-Levelトークン（`xapp-…`）を生成。
+4. **Event Subscriptions**で、ボットイベントを購読：`app_mention`、`message.im`。
+5. `.env`に`SLACK_BOT_TOKEN`と`SLACK_APP_TOKEN`を設定し、`config.yaml`でチャネルを有効にします。
+
+**Feishu / Larkのセットアップ**
+
+1. [Feishu Open Platform](https://open.feishu.cn/)でアプリを作成 → **ボット**機能を有効化。
+2. 権限を追加：`im:message`、`im:message.p2p_msg:readonly`、`im:resource`。
+3. **イベント**で`im.message.receive_v1`を購読し、**ロングコネクション**モードを選択。
+4. App IDとApp Secretをコピー。`.env`に`FEISHU_APP_ID`と`FEISHU_APP_SECRET`を設定し、`config.yaml`でチャネルを有効にします。
+
+**コマンド**
+
+チャネル接続後、チャットから直接DeerFlowと対話できます：
+
+| コマンド | 説明 |
+|---------|-------------|
+| `/new` | 新しい会話を開始 |
+| `/status` | 現在のスレッド情報を表示 |
+| `/models` | 利用可能なモデルを一覧表示 |
+| `/memory` | メモリを表示 |
+| `/help` | ヘルプを表示 |
+
+> コマンドプレフィックスのないメッセージは通常のチャットとして扱われ、DeerFlowがスレッドを作成して会話形式で応答します。
+
+## Deep Researchからスーパーエージェントハーネスへ
+
+DeerFlowはDeep Researchフレームワークとして始まり、コミュニティがそれを大きく発展させました。リリース以来、開発者たちはリサーチを超えて活用してきました：データパイプラインの構築、スライドデッキの生成、ダッシュボードの立ち上げ、コンテンツワークフローの自動化。私たちが予想もしなかったことです。
+
+これは重要なことを示していました：DeerFlowは単なるリサーチツールではなかったのです。それは**ハーネス**——エージェントが実際に仕事をこなすためのインフラを提供するランタイムでした。
+
+そこで、ゼロから再構築しました。
+
+DeerFlow 2.0は、もはやつなぎ合わせるフレームワークではありません。バッテリー同梱、完全に拡張可能なスーパーエージェントハーネスです。LangGraphとLangChainの上に構築され、エージェントが必要とするすべてを標準搭載しています：ファイルシステム、メモリ、スキル、サンドボックス実行、そして複雑なマルチステップタスクのためのプランニングとサブエージェントの生成機能。
+
+そのまま使うもよし。分解して自分のものにするもよし。
+
+## コア機能
+
+### スキルとツール
+
+スキルこそが、DeerFlowを*ほぼ何でもできる*ものにしています。
+
+標準的なエージェントスキルは構造化された機能モジュールです——ワークフロー、ベストプラクティス、サポートリソースへの参照を定義するMarkdownファイルです。DeerFlowにはリサーチ、レポート生成、スライド作成、Webページ、画像・動画生成などの組み込みスキルが付属しています。しかし、真の力は拡張性にあります：独自のスキルを追加し、組み込みスキルを置き換え、複合ワークフローに組み合わせることができます。
+
+スキルはプログレッシブに読み込まれます——タスクが必要とする時にのみ、一度にすべてではありません。これによりコンテキストウィンドウを軽量に保ち、トークンに敏感なモデルでもDeerFlowがうまく動作します。
+
+Gateway経由で`.skill`アーカイブをインストールする際、DeerFlowは`version`、`author`、`compatibility`などの標準的なオプショナルフロントマターメタデータを受け入れ、有効な外部スキルを拒否しません。
+
+ツールも同じ哲学に従います。DeerFlowにはコアツールセット——Web検索、Webフェッチ、ファイル操作、bash実行——が付属し、MCPサーバーやPython関数によるカスタムツールをサポートしています。何でも入れ替え可能、何でも追加可能です。
+
+Gatewayが生成するフォローアップ提案は、プレーン文字列のモデル出力とブロック/リスト形式のリッチコンテンツの両方をJSON配列レスポンスの解析前に正規化するため、プロバイダー固有のコンテンツラッパーが提案をサイレントにドロップすることはありません。
+
+```
+# サンドボックスコンテナ内のパス
+/mnt/skills/public
+├── research/SKILL.md
+├── report-generation/SKILL.md
+├── slide-creation/SKILL.md
+├── web-page/SKILL.md
+└── image-generation/SKILL.md
+
+/mnt/skills/custom
+└── your-custom-skill/SKILL.md      ← あなたのカスタムスキル
+```
+
+#### Claude Code連携
+
+`claude-to-deerflow`スキルを使えば、[Claude Code](https://docs.anthropic.com/en/docs/claude-code)から直接、実行中のDeerFlowインスタンスと対話できます。リサーチタスクの送信、ステータスの確認、スレッドの管理——すべてターミナルから離れずに実行できます。
+
+**スキルのインストール**：
+
+```bash
+npx skills add https://github.com/bytedance/deer-flow --skill claude-to-deerflow
+```
+
+DeerFlowが実行中であることを確認し（デフォルトは`http://localhost:2026`）、Claude Codeで`/claude-to-deerflow`コマンドを使用します。
+
+**できること**：
+- DeerFlowにメッセージを送信してストリーミングレスポンスを取得
+- 実行モードの選択：flash（高速）、standard、pro（プランニング）、ultra（サブエージェント）
+- DeerFlowのヘルスチェック、モデル/スキル/エージェントの一覧表示
+- スレッドと会話履歴の管理
+- 分析用ファイルのアップロード
+
+**環境変数**（オプション、カスタムエンドポイント用）：
+
+```bash
+DEERFLOW_URL=http://localhost:2026            # 統合プロキシベースURL
+DEERFLOW_GATEWAY_URL=http://localhost:2026    # Gateway API
+DEERFLOW_LANGGRAPH_URL=http://localhost:2026/api/langgraph  # LangGraph API
+```
+
+完全なAPIリファレンスは[`skills/public/claude-to-deerflow/SKILL.md`](skills/public/claude-to-deerflow/SKILL.md)をご覧ください。
+
+### サブエージェント
+
+複雑なタスクは単一のパスに収まりません。DeerFlowはそれを分解します。
+
+リードエージェントはオンザフライでサブエージェントを生成できます——それぞれ独自のスコープ付きコンテキスト、ツール、終了条件を持ちます。サブエージェントは可能な限り並列で実行され、構造化された結果を報告し、リードエージェントがすべてを一貫した出力に統合します。
+
+これがDeerFlowが数分から数時間かかるタスクを処理する方法です：リサーチタスクが十数のサブエージェントに展開され、それぞれが異なる角度を探索し、1つのレポート——またはWebサイト——または生成されたビジュアル付きのスライドデッキに収束します。1つのハーネス、多くの手。
+
+### サンドボックスとファイルシステム
+
+DeerFlowは物事を*語る*だけではありません。自分のコンピューターを持っています。
+
+各タスクは、完全なファイルシステムを持つ分離されたDockerコンテナ内で実行されます——スキル、ワークスペース、アップロード、出力。エージェントはファイルの読み書き・編集を行います。bashコマンドを実行し、コーディングを行います。画像を表示します。すべてサンドボックス化され、すべて監査可能で、セッション間の汚染はゼロです。
+
+これが、ツールアクセスのあるチャットボットと、実際の実行環境を持つエージェントの違いです。
+
+```
+# サンドボックスコンテナ内のパス
+/mnt/user-data/
+├── uploads/          ← あなたのファイル
+├── workspace/        ← エージェントの作業ディレクトリ
+└── outputs/          ← 最終成果物
+```
+
+### コンテキストエンジニアリング
+
+**分離されたサブエージェントコンテキスト**：各サブエージェントは独自の分離されたコンテキストで実行されます。これにより、サブエージェントはメインエージェントや他のサブエージェントのコンテキストを見ることができません。これは、サブエージェントが目の前のタスクに集中し、メインエージェントや他のサブエージェントのコンテキストに気を取られないようにするために重要です。
+
+**要約化**：セッション内で、DeerFlowはコンテキストを積極的に管理します——完了したサブタスクの要約、中間結果のファイルシステムへのオフロード、もはや直接関係のないものの圧縮。これにより、コンテキストウィンドウを超えることなく、長いマルチステップタスク全体を通じてシャープさを維持します。
+
+### 長期メモリ
+
+ほとんどのエージェントは、会話が終わるとすべてを忘れます。DeerFlowは記憶します。
+
+セッションをまたいで、DeerFlowはあなたのプロフィール、好み、蓄積された知識の永続的なメモリを構築します。使えば使うほど、あなたのことをよく知るようになります——あなたの文体、技術スタック、繰り返されるワークフロー。メモリはローカルに保存され、あなたの管理下にあります。
+
+メモリ更新は適用時に重複するファクトエントリをスキップするようになり、繰り返される好みやコンテキストがセッションをまたいで際限なく蓄積されることはありません。
+
+## 推奨モデル
+
+DeerFlowはモデルに依存しません——OpenAI互換APIを実装する任意のLLMで動作します。とはいえ、以下をサポートするモデルで最高のパフォーマンスを発揮します：
+
+- **長いコンテキストウィンドウ**（10万トークン以上）：深いリサーチとマルチステップタスク向け
+- **推論能力**：適応的なプランニングと複雑な分解向け
+- **マルチモーダル入力**：画像理解と動画理解向け
+- **強力なツール使用**：信頼性の高いファンクションコーリングと構造化された出力向け
+
+## 組み込みPythonクライアント
+
+DeerFlowは、完全なHTTPサービスを実行せずに組み込みPythonライブラリとして使用できます。`DeerFlowClient`は、すべてのエージェントとGateway機能へのプロセス内直接アクセスを提供し、HTTP Gateway APIと同じレスポンススキーマを返します：
+
+```python
+from deerflow.client import DeerFlowClient
+
+client = DeerFlowClient()
+
+# チャット
+response = client.chat("Analyze this paper for me", thread_id="my-thread")
+
+# ストリーミング（LangGraph SSEプロトコル：values、messages-tuple、end）
+for event in client.stream("hello"):
+    if event.type == "messages-tuple" and event.data.get("type") == "ai":
+        print(event.data["content"])
+
+# 設定＆管理 — Gateway準拠のdictを返す
+models = client.list_models()        # {"models": [...]}
+skills = client.list_skills()        # {"skills": [...]}
+client.update_skill("web-search", enabled=True)
+client.upload_files("thread-1", ["./report.pdf"])  # {"success": True, "files": [...]}
+```
+
+すべてのdict返却メソッドはCIでGateway Pydanticレスポンスモデルに対して検証されており（`TestGatewayConformance`）、組み込みクライアントがHTTP APIスキーマと同期していることを保証します。完全なAPIドキュメントは`backend/packages/harness/deerflow/client.py`をご覧ください。
+
+## ドキュメント
+
+- [コントリビュートガイド](CONTRIBUTING.md) - 開発環境のセットアップとワークフロー
+- [設定ガイド](backend/docs/CONFIGURATION.md) - セットアップと設定の手順
+- [アーキテクチャ概要](backend/CLAUDE.md) - 技術的なアーキテクチャの詳細
+- [バックエンドアーキテクチャ](backend/README.md) - バックエンドアーキテクチャとAPIリファレンス
+
+## ⚠️ セキュリティに関する注意
+
+### 不適切なデプロイはセキュリティリスクを引き起こす可能性があります
+
+DeerFlowは**システムコマンドの実行、リソース操作、ビジネスロジックの呼び出し**などの重要な高権限機能を備えており、デフォルトでは**ローカルの信頼できる環境（127.0.0.1のループバックアクセスのみ）にデプロイされる設計**になっています。信頼できないLAN、公開クラウドサーバー、または複数のエンドポイントからアクセス可能なネットワーク環境にエージェントをデプロイし、厳格なセキュリティ対策を講じない場合、以下のようなセキュリティリスクが生じる可能性があります：
+
+- **不正な違法呼び出し**：エージェントの機能が権限のない第三者や悪意のあるインターネットスキャナーに発見され、システムコマンドやファイル読み書きなどの高リスク操作を実行する不正な一括リクエストが引き起こされ、重大なセキュリティ上の問題が発生する可能性があります。
+- **コンプライアンスおよび法的リスク**：エージェントがサイバー攻撃やデータ窃取などの違法行為に不正使用された場合、法的責任やコンプライアンス上のリスクが生じる可能性があります。
+
+### セキュリティ推奨事項
+
+**注意：DeerFlowはローカルの信頼できるネットワーク環境にデプロイすることを強く推奨します。** クロスデバイス・クロスネットワークのデプロイが必要な場合は、以下のような厳格なセキュリティ対策を実装する必要があります：
+
+- **IPホワイトリストの設定**：`iptables`を使用するか、ハードウェアファイアウォール / ACL機能付きスイッチをデプロイして**IPホワイトリストルールを設定**し、他のすべてのIPアドレスからのアクセスを拒否します。
+- **前置認証**：リバースプロキシ（nginxなど）を設定し、**強力な前置認証を有効化**して、認証なしのアクセスをブロックします。
+- **ネットワーク分離**：可能であれば、エージェントと信頼できるデバイスを**同一の専用VLAN**に配置し、他のネットワークデバイスから隔離します。
+- **アップデートを継続的に確認**：DeerFlowのセキュリティ機能のアップデートを継続的にフォローしてください。
+
+## コントリビュート
+
+コントリビューションを歓迎します！開発環境のセットアップ、ワークフロー、ガイドラインについては[CONTRIBUTING.md](CONTRIBUTING.md)をご覧ください。
+
+回帰テストのカバレッジには、`backend/tests/`でのDockerサンドボックスモード検出とプロビジョナーkubeconfig-pathハンドリングテストが含まれます。
 
 ## ライセンス
 
-このプロジェクトはオープンソースであり、[MIT ライセンス](./LICENSE)に従っています。
+このプロジェクトはオープンソースであり、[MITライセンス](./LICENSE)の下で提供されています。
 
 ## 謝辞
 
-DeerFlow はオープンソースコミュニティの素晴らしい成果の上に構築されています。DeerFlow を可能にしたすべてのプロジェクトと貢献者に深く感謝します。私たちは確かに巨人の肩の上に立っています。
+DeerFlowはオープンソースコミュニティの素晴らしい成果の上に構築されています。DeerFlowを可能にしてくれたすべてのプロジェクトとコントリビューターに深く感謝いたします。まさに、巨人の肩の上に立っています。
 
-以下のプロジェクトに心からの感謝を表します：
+以下のプロジェクトの貴重な貢献に心からの感謝を申し上げます：
 
-- **[LangChain](https://github.com/langchain-ai/langchain)**：彼らの優れたフレームワークは、シームレスな統合と機能性を実現する LLM 相互作用とチェーンに力を与えています。
-- **[LangGraph](https://github.com/langchain-ai/langgraph)**：マルチエージェントオーケストレーションへの革新的アプローチは、DeerFlow の複雑なワークフローの実現に不可欠でした。
+- **[LangChain](https://github.com/langchain-ai/langchain)**：その優れたフレームワークがLLMのインタラクションとチェーンを支え、シームレスな統合と機能を実現しています。
+- **[LangGraph](https://github.com/langchain-ai/langgraph)**：マルチエージェントオーケストレーションへの革新的なアプローチが、DeerFlowの洗練されたワークフローの実現に大きく貢献しています。
 
-これらのプロジェクトはオープンソースコラボレーションの変革力を示しており、その基盤の上に構築できることを誇りに思います。
+これらのプロジェクトはオープンソースコラボレーションの変革的な力を体現しており、その基盤の上に構築できることを誇りに思います。
 
-### 主要貢献者
+### 主要コントリビューター
 
-`DeerFlow`の主要な作者に心から感謝します。彼らのビジョン、情熱、献身がこのプロジェクトを実現しました：
+`DeerFlow`のコア著者に心からの感謝を捧げます。そのビジョン、情熱、献身がこのプロジェクトに命を吹き込みました：
 
 - **[Daniel Walnut](https://github.com/hetaoBackend/)**
 - **[Henry Li](https://github.com/magiccube/)**
 
-あなたの揺るぎない取り組みと専門知識が DeerFlow の成功を推進しています。この旅をリードしていただき光栄です。
+揺るぎないコミットメントと専門知識が、DeerFlowの成功の原動力です。この旅の先頭に立ってくださっていることを光栄に思います。
 
-## スター履歴
+## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=bytedance/deer-flow&type=Date)](https://star-history.com/#bytedance/deer-flow&Date)
